@@ -1,0 +1,37 @@
+
+.album {
+  margin-top: 20%;
+  background-color: rgb(56, 56, 56);
+  border-radius: 400px;
+  width: 250px;
+  height: 250px;
+  z-index: 100;
+  
+}
+.album .inside {
+  z-index: -1;
+  padding: 10px 10px 10px 10px;
+  border-radius: 400px;
+  width: 230px;
+  height: 230px;
+  cursor: pointer;
+  transform: rotate(360deg) translate(0%);
+  
+}
+.active {
+  z-index: -1;
+  padding: 10px 10px 10px 10px;
+  border-radius: 400px;
+  width: 230px;
+  height: 230px;
+  cursor: pointer;
+  transition: 1s;
+  animation: rotateAlbumArt 5s linear 0s infinite forwards;
+}
+
+
+@keyframes rotateAlbumArt {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,97 @@
+<html>
+    
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../music/music.css">
+      <link rel="stylesheet" href="../music/back.css">
+      <link rel="stylesheet" href="../menu.css">
+      <script type="text/javascript" src="../menu.js"></script>
+        <style>
+        </style>
+    <title>Music | Hunter</title>
+        <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/check-mark-icon/check-mark-in-black-icon-8.png">
+</head>
+<body>
+  
+  <center>
+    <div class="area" >
+      <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+      </ul>
+  </div >
+        <div w3-include-html="../menu.html"></div> 
+<div class="album" style="z-index: 999;">
+  <div data-video="DWcJFNfaw9c"
+data-autoplay="0"
+data-loop="0"
+id="youtube-audio" style="z-index: 999;" 
+>
+<img src="https://i.ibb.co/yYWbbJJ/2223404.jpg" class="inside" id="cd" onclick="onclick()">
+</div>
+
+</div>
+
+
+</center>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+
+
+function onYouTubeIframeAPIReady(){
+  var e=document.getElementById("youtube-audio"),
+  t=document.createElement("img");
+  t.setAttribute("id","youtube-icon"),
+  t.style.cssText="cursor:pointer;cursor:hand",
+  e.appendChild(t);var a=document.createElement("div");
+  a.setAttribute("id","youtube-player"),
+  e.appendChild(a);var o=function(e)
+  {
+    var a=e?"IDzX9gL.png":"quyUPXN.png";
+    t.setAttribute("src","")
+  };
+  
+  e.onclick=function(){
+    document.getElementById("cd").className = "active";
+    r.getPlayerState()===YT.PlayerState.PLAYING||r.getPlayerState()===YT.PlayerState.BUFFERING?
+    
+    (r.pauseVideo(),document.getElementById("cd").className = "inside",o(!1) )
+    
+    
+    :(r.playVideo(),o(!0))
+  
+  }
+    
+    
+    ;
+    
+    
+    var r=new YT.Player(
+      "youtube-player",{height:"0",width:"0",videoId:e.dataset.video,playerVars:{autoplay:e.dataset.autoplay,loop:e.dataset.loop},
+      events:{
+        
+        
+        onReady:function(e){r.setPlaybackQuality("small"),
+      o(r.getPlayerState()!==YT.PlayerState.CUED)},
+      onStateChange:function(e){e.data===YT.PlayerState.ENDED&&o(!1)
+      
+      }}})}
+</script>
+
+  
+<script>
+includeHTML();
+</script>
+
+</body>
+</html>
