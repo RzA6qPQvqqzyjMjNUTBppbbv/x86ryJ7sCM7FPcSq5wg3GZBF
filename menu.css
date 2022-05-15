@@ -201,7 +201,7 @@
   opacity: 1;
   transform: translateY(0);
   transition: opacity 350ms ease,
-              transform 250ms ease;
+  transform 250ms ease;
 }
 .menu-icon:checked ~ .nav ul li:nth-child(1){
   transition-delay: 1400ms;
