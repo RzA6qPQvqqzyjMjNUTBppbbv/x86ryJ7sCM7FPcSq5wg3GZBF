@@ -16,3 +16,6 @@ body {
   color: rgb(42, 154, 172);
   margin-top: 20%;
 }
+.buttonsdiv button{
+ margin: 10px;
+}
