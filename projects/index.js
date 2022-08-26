@@ -13,7 +13,13 @@ function change_theme(){
     }
 } 
 function on_load(){
-    if(!localStorage.getItem("hunter_theme")) return localStorage.setItem("hunter_theme", "default")
+    if(!localStorage.getItem("hunter_theme")){
+        localStorage.setItem("hunter_theme", "default")
+        document.getElementById("con-2").style.backgroundColor = ('#234769')
+        document.getElementById("btn-theme").className = ('bi bi-brightness-high-fill')
+        document.body.style.backgroundColor = "#173753"
+        return
+    }  
     if(localStorage.getItem("hunter_theme") == "white"){
         document.getElementById("btn-theme").className = ('bi bi-moon-fill')
         document.body.style.backgroundColor = "#1D70A2"
